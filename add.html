@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add Employee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <style>
+      /* Đặt đoạn mã CSS trong phần style */
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        text-align: left;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      form {
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        display: block;
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0069d9;
+      }
+
+      a {
+        text-decoration: none;
+        color: #007bff;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Add Employee</h1>
+
+    <form method="POST">
+      <label>Name</label>
+      <input type="text" name="name" required />
+
+      <label>Position</label>
+      <input type="text" name="position" required />
+
+      <label>Office</label>
+      <input type="text" name="office" required />
+
+      <label>Age</label>
+      <input type="number" name="age" required />
+
+      <label>Start Date</label>
+      <input type="text" name="start_date" placeholder="YYYY-MM-DD" required />
+
+      <label>Salary</label>
+      <input type="number" name="salary" step="0.01" required />
+
+      <button type="submit">Add</button>
+    </form>
+
+    <a href="{{ url_for('index') }}">Back</a>
+  </body>
+</html>

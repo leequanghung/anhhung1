@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Search Employee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <style>
+      /* Đặt đoạn mã CSS trong phần style */
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        text-align: left;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      form {
+        background-color: #f5f5f5;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        display: block;
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0069d9;
+      }
+
+      a {
+        text-decoration: none;
+        color: #007bff;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0069d9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Search Employee</h1>
+
+    <form method="GET" action="{{ url_for('search_employee') }}">
+
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter name" />
+
+      <label for="position">Position</label>
+      <input type="text" id="position" name="position" placeholder="Enter position" />
+
+      <label for="office">Office</label>
+      <input type="text" id="office" name="office" placeholder="Enter office" />
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" placeholder="Enter age" />
+
+      <label for="start_date">Start Date</label>
+      <input type="text" id="start_date" name="start_date" placeholder="YYYY-MM-DD" />
+
+      <label for="salary">Salary</label>
+      <input type="number" id="salary" name="salary" step="0.01" placeholder="Enter salary" />
+
+      <button type="submit">Search Employee</button>
+    </form>
+
+    <a href="index.html">Back</a>
+  </body>
+</html>
